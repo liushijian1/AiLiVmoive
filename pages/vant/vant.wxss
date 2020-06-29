@@ -1,0 +1,160 @@
+/* pages/vant.wxss */
+page {
+  height: 100%;
+  background: #000;
+}
+.van-nav-bar.van-hairline--bottom{
+  padding: 0!important;
+}
+.van-hairline--top-bottom:after{
+  border-width: 0!important;
+}
+.van-tab.van-tab--active {
+  color: #fff;
+}
+
+.van-tabs .van-tab__pane {
+  overflow: hidden;
+}
+
+/* 发现页部分 */
+.banner {
+  height: 200px;
+}
+
+.banner .swiper-item image {
+  width: 100%;
+  height: 200px;
+}
+
+.theme {
+  color: white;
+  text-align: center;
+  line-height: 44px;
+  /* margin:5px 0; */
+}
+
+.today {
+  text-align: left;
+  line-height: normal;
+}
+
+/* 分类页部分 */
+.van-nav-bar__title.van-ellipsis {
+  max-width: 100%;
+}
+
+.van-tabs__nav.van-tabs__nav--line {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+van-nav-bar .van-nav-bar__left,
+.van-nav-bar__right {
+  z-index: 9;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.van-grid .van-grid-item__content--square {
+  padding: 0;
+}
+
+.van-grid .van-grid-item {
+  position: relative;
+}
+
+.van-grid .van-grid-item image {
+  filter: brightness(0.6);
+}
+
+.van-grid .van-grid-item view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.van-grid .van-grid-item view {
+  color: white;
+  font-weight: bold;
+}
+
+.van-tabs .van-tabs__scroll--line {
+  background-color: black;
+}
+
+.van-tabs .van-tabs__nav .van-tabs__line {
+  background-color: #0f0;
+}
+
+/* 登录页部分 */
+.loginbg {
+  height: 180px;
+  /* background-color: #fff; */
+  position: relative;
+}
+.bgimgae{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+
+.login {
+  width: 70px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.login .head{
+  width: 70px;
+  height: 70px;
+  background-color: #bbbbbb;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.login .text{
+  font-size: 14px;
+  color: #bbbbbb;
+}
+.login image {
+  width: 55px;
+  padding-top: 15px;
+
+}
+
+.myItem {
+  display: flex;
+  height: 40px;
+  background-color: #1a1a1a;
+  /* padding-left: 10px; */
+  font-size: 14px;
+  color: white;
+  line-height: 40px;
+  text-align:left;
+  border-bottom: 1px solid #1c1c1c;
+}
+.myItem .icon{
+  padding: 0 10px;
+}
+.myItem .text{
+  flex: 1;
+}
+.myItem:nth-of-type(5){
+  margin-top: 40px;
+}

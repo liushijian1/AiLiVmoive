@@ -1,0 +1,36 @@
+var parseInfo = function (cates) {
+  console.log(cates)
+  // wxs不支持ES6,不能用箭头函数
+  if(cates){
+    return cates.map(function(item){
+      return item.catename
+    }).join(',')
+  }
+  
+}
+
+// 处理视频时间格式
+var parseTime = function (duration) {
+    return formatTime(duration)
+  // return parseInt(duration / 60) + ':' + parseInt(duration % 60) 
+}
+var addTime=function(duration){
+  return duration=parseInt((duration/1000)/60%24)
+}
+
+// 时间格式化
+var formatTime=function (sec) {
+  //sec: 秒数
+  //不足10，需要补零
+  var minute = Math.floor(sec / 60);
+  minute = minute >= 10 ? minute : '0' + minute;
+  var second = Math.floor(sec % 60);
+  second = second >= 10 ? second : '0' + second;
+  return minute + ':' + second;
+}
+
+module.exports = {
+  parseInfo: parseInfo,
+  parseTime: parseTime,
+  addTime:addTime
+}

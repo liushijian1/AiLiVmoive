@@ -1,0 +1,10 @@
+<!--components/postCard/index.wxml-->
+<!-- <text>components/postCard/index.wxml</text> -->
+<wxs module="parseTool" src="../../utils/tools.wxs"></wxs>
+<view class="postItem" bindtap="routerToPlay" data-post="{{postItem}}">
+  <image src="{{postItem.image}}" />
+  <view class="info">
+    <view class="label">{{parseTool.parseInfo(postItem.cates)}}/{{parseTool.parseTime(postItem.duration)}}</view>
+    <view>{{postItem.title}}</view>
+  </view>
+</view>

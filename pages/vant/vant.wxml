@@ -1,0 +1,65 @@
+<!--pages/vant.wxml-->
+<van-nav-bar>
+	<!-- <van-icon name="circle" slot="left" />
+	<van-icon name="search" slot="right" /> -->
+	<van-tabs border="false" offset-top="0" slot="title" active="{{ active }}" animated="true" bind:change="onChange">
+		<van-tab title="发现">
+			<swiper class="banner" indicator-dots="{{indicatorDots}}" circular="true" autoplay="true" interval="5000" duration="3000">
+				<swiper-item wx:for="{{indexList.banner.list}}">
+					<view class="swiper-item">
+						<image widthFix src="{{item.image}}"></image>
+					</view>
+				</swiper-item>
+			</swiper>
+			<view class="today">
+				<view class="theme">今日</view>
+				<post-card wx:for="{{indexList.today.list}}" postItem="{{item}}"></post-card>
+			</view>
+
+			<view class="today">
+				<view class="theme">热门</view>
+				<post-card wx:for="{{indexList.hot.list}}" postItem="{{item}}"></post-card>
+			</view>
+
+			<view class="today">
+				<view class="theme">专题</view>
+				<post-card wx:for="{{indexList.album.list}}" postItem="{{item}}"></post-card>
+			</view>
+
+		</van-tab>
+		<van-tab title="分类">
+			<van-grid square column-num="2" border="{{ false }}">
+				<van-grid-item use-slot wx:for="{{cataList}}" wx:key="key" data-cateId="{{item.cateid}}" bindtap="routerToList">
+					<image style="width: 100%;" src="{{item.icon}}" />
+					<view>
+						<text>#{{item.catename}}#</text>
+					</view>
+				</van-grid-item>
+			</van-grid>
+		</van-tab>
+		<van-tab title="我的">
+			<view class="loginbg">
+				<image class="bgimgae" mode="widthFix" src="../src/login_bg.jpg"></image>
+				<view class="login">
+					<view class="head">
+						<image mode="widthFix" src="../src/login.png"></image>
+					</view>
+					<text class="text">点击登录</text>
+				</view>
+			</view>
+			<view class="myList">
+				<view class="myItem" wx:for="{{myItem}}">
+					<view class="icon" class='icon iconfont {{item.icon}}'></view>
+					<view class="text">{{item.title}}</view>
+					<view class="icon" class='icon iconfont icon-qianjin'></view>
+				</view>
+			</view>
+
+		</van-tab>
+	</van-tabs>
+</van-nav-bar>
+<van-overlay show="{{ show }}" bind:click="onClickHide">
+	<view class="wrapper">
+		<van-loading type="spinner" color="#1989fa" vertical>加载中...</van-loading>
+	</view>
+</van-overlay>

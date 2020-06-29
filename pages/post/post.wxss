@@ -1,0 +1,6 @@
+/* pages/post/post.wxss */
+.loading{
+  width: 100%;
+  text-align: center;
+  /* padding: 5px 0; */
+}

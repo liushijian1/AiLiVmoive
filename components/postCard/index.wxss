@@ -1,0 +1,21 @@
+/* components/postCard/index.wxss */
+.postItem{
+  position: relative;
+}
+.postItem image{
+  width: 100%;
+  display: block;
+  filter: brightness(0.6);
+}
+.postItem .info{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  /* padding: 0 0 15px 15px; */
+  color: white;
+  font-size: 16px;
+}
+.postItem .label{
+  font-size: 14px;
+  color: rgba(255, 255, 255, .8);
+}

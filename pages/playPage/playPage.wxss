@@ -1,0 +1,103 @@
+/* pages/playPage/playPage.wxss */
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 40%;
+  margin-right: 15px;
+  position: relative;
+}
+/* .scroll-view-item_H:first-of-type{
+  margin-left: 15px;
+} */
+.scroll-view-item_H image{
+  width: 100%;
+  filter: brightness(0.6);
+}
+.scroll-view-item_H .card{
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: white;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.scroll-view-item_H .cardTitle{
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  /* word-break: break-all; */
+}
+.articleTitle{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0 15px;
+}
+.progress{
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+}
+.intro{
+  font-size: 14px;
+  padding:0 15px;
+  color: #333333;
+  margin: 30px 0;
+}
+.relative{
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.h3{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.comment{
+  margin: 20px 0;
+  padding: 5px 15px;
+}
+.commentCount{
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+.userItem{
+  margin: 15px 0;
+  /* border-bottom: 1px solid #999999; */
+}
+.line{
+  border-bottom: 1px solid #d4cdcd;
+}
+.userTop{
+  display: flex;
+}
+.userImg{
+  width: 30px;
+  height: 30px;
+  /* flex: 2; */
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userImg image{
+  width: 100%;
+  height: auto;
+}
+.userName{
+  font-size: 12px;
+  margin-left: 10px;
+}
+.updataTime{
+  font-size: 10px;
+}
+.commitContent{
+  font-size: 12px;
+  /* line-height: 45px; */
+  padding:15px;
+}
+

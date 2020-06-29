@@ -1,0 +1,45 @@
+<!--pages/playPage/playPage.wxml-->
+<!-- <text>pages/playPage/playPage.wxml</text> -->
+<!-- http://api.kele8.cn/pic/{{postView.content_video[0].progressive[2].url}} -->
+<video id="myVideo" style="width:100%" poster="{{postView.image}}" object-fit="fill" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" show-center-play-btn='{{true}}' show-play-btn="{{true}}" controls> </video>
+
+<wxs module="parseTool" src="../../utils/tools.wxs"></wxs>
+<block wx:if="{{viewShow}}">
+	<view class="articleTitle">{{postView.title}}</view>
+	<view class="info">
+		<view class="progress">{{postView.cate[0]}}/{{parseTool.parseTime(postView.duration)}}</view>
+		<view class="intro">{{postView.intro}}</view>
+	</view>
+	<view class="relative" wx:for="{{postView.relate_video}}">
+		<view class="h3">{{item.name}}</view>
+		<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+			<view class="scroll-view-item_H" wx:for="{{item.list}}" wx:for-index="idx" wx:for-item="card" bindtap="routerToPlay" data-post="{{card.postid}}">
+				<image mode="widthFix" src="{{card.image}}"></image>
+				<view class="card">
+					<view>{{parseTool.parseTime(card.duration)}}</view>
+					<view class="cardTitle">{{card.title}}</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view class="comment">
+		<view class="commentCount">{{postView.comment.total}}条评论</view>
+		<view class="userBox">
+			<view class="userItem" wx:for="{{postView.comment.list}}">
+				<view class="userTop">
+					<view class="userImg">
+						<image mode="widthFix" src="{{item.userinfo.avatar}}"></image>
+					</view>
+					<view class="userName">
+						<view>{{item.userinfo.username}}</view>
+						<view class="updataTime">{{parseTool.addTime(item.addtime)}}小时前</view>
+					</view>
+				</view>
+				<view class="commitContent">
+					{{item.content}}
+				</view>
+				<view class="line"></view>
+			</view>
+		</view>
+	</view>
+</block>
